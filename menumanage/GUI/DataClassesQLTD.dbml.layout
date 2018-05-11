@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DataClassesQLTD">
+  <DataContextMoniker Name="/DataClassesQLTDDataContext" />
+  <nestedChildShapes>
+    <classShape Id="beccd3f4-3728-423f-afc5-62ad1a477939" absoluteBounds="3.5, 0.875, 2, 1.7708968098958333">
+      <DataClassMoniker Name="/DataClassesQLTDDataContext/MonAn" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7c202c19-b7a7-4495-967f-c89a2dcc191b" absoluteBounds="3.515, 1.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="dd166968-13b2-4bb9-8675-0593a36b9351" absoluteBounds="0.75, 1.25, 2, 1.1939925130208338">
+      <DataClassMoniker Name="/DataClassesQLTDDataContext/NhomMonAn" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6aab7161-f225-4235-ae26-1dc45cc16ada" absoluteBounds="0.765, 1.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 1.84699625651042); (3.5 : 1.84699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesQLTDDataContext/NhomMonAn/NhomMonAn_MonAn" />
+      <nodes>
+        <classShapeMoniker Id="dd166968-13b2-4bb9-8675-0593a36b9351" />
+        <classShapeMoniker Id="beccd3f4-3728-423f-afc5-62ad1a477939" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnMoi = new System.Windows.Forms.Button();
@@ -46,8 +47,19 @@
             this.lblTennhom = new System.Windows.Forms.Label();
             this.lblManhom = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.ltvMonAn = new System.Windows.Forms.ListView();
             this.trvNhomMA = new System.Windows.Forms.TreeView();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.qLTDDataSet = new GUI.QLTDDataSet();
+            this.monAnBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.monAnTableAdapter = new GUI.QLTDDataSetTableAdapters.MonAnTableAdapter();
+            this.maMonAnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenMonAnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.donViTinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.donGiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maNhomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLTDDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.monAnBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSua
@@ -58,6 +70,7 @@
             this.btnSua.TabIndex = 41;
             this.btnSua.Text = "Update";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnLuu
             // 
@@ -67,6 +80,7 @@
             this.btnLuu.TabIndex = 40;
             this.btnLuu.Text = "Save";
             this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnMoi
             // 
@@ -76,6 +90,7 @@
             this.btnMoi.TabIndex = 39;
             this.btnMoi.Text = "Nhap moi";
             this.btnMoi.UseVisualStyleBackColor = true;
+            this.btnMoi.Click += new System.EventHandler(this.btnMoi_Click);
             // 
             // btnCancer
             // 
@@ -83,8 +98,9 @@
             this.btnCancer.Name = "btnCancer";
             this.btnCancer.Size = new System.Drawing.Size(75, 23);
             this.btnCancer.TabIndex = 38;
-            this.btnCancer.Text = "CANCER";
+            this.btnCancer.Text = "CANCEL";
             this.btnCancer.UseVisualStyleBackColor = true;
+            this.btnCancer.Click += new System.EventHandler(this.btnCancer_Click);
             // 
             // btnThem
             // 
@@ -94,6 +110,7 @@
             this.btnThem.TabIndex = 37;
             this.btnThem.Text = "ADD";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // txbDonGia
             // 
@@ -200,26 +217,81 @@
             this.label1.TabIndex = 24;
             this.label1.Text = "Thong tin mon an";
             // 
-            // ltvMonAn
-            // 
-            this.ltvMonAn.Location = new System.Drawing.Point(249, 12);
-            this.ltvMonAn.Name = "ltvMonAn";
-            this.ltvMonAn.Size = new System.Drawing.Size(539, 254);
-            this.ltvMonAn.TabIndex = 23;
-            this.ltvMonAn.UseCompatibleStateImageBehavior = false;
-            // 
             // trvNhomMA
             // 
             this.trvNhomMA.Location = new System.Drawing.Point(12, 12);
             this.trvNhomMA.Name = "trvNhomMA";
             this.trvNhomMA.Size = new System.Drawing.Size(231, 344);
             this.trvNhomMA.TabIndex = 22;
+            this.trvNhomMA.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.trvNhomMA_AfterSelect);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.maMonAnDataGridViewTextBoxColumn,
+            this.tenMonAnDataGridViewTextBoxColumn,
+            this.donViTinhDataGridViewTextBoxColumn,
+            this.donGiaDataGridViewTextBoxColumn,
+            this.maNhomDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.monAnBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(250, 13);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(538, 249);
+            this.dataGridView1.TabIndex = 42;
+            this.dataGridView1.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.dataGridView1_RowStateChanged);
+            // 
+            // qLTDDataSet
+            // 
+            this.qLTDDataSet.DataSetName = "QLTDDataSet";
+            this.qLTDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // monAnBindingSource
+            // 
+            this.monAnBindingSource.DataMember = "MonAn";
+            this.monAnBindingSource.DataSource = this.qLTDDataSet;
+            // 
+            // monAnTableAdapter
+            // 
+            this.monAnTableAdapter.ClearBeforeFill = true;
+            // 
+            // maMonAnDataGridViewTextBoxColumn
+            // 
+            this.maMonAnDataGridViewTextBoxColumn.DataPropertyName = "maMonAn";
+            this.maMonAnDataGridViewTextBoxColumn.HeaderText = "maMonAn";
+            this.maMonAnDataGridViewTextBoxColumn.Name = "maMonAnDataGridViewTextBoxColumn";
+            // 
+            // tenMonAnDataGridViewTextBoxColumn
+            // 
+            this.tenMonAnDataGridViewTextBoxColumn.DataPropertyName = "tenMonAn";
+            this.tenMonAnDataGridViewTextBoxColumn.HeaderText = "tenMonAn";
+            this.tenMonAnDataGridViewTextBoxColumn.Name = "tenMonAnDataGridViewTextBoxColumn";
+            // 
+            // donViTinhDataGridViewTextBoxColumn
+            // 
+            this.donViTinhDataGridViewTextBoxColumn.DataPropertyName = "donViTinh";
+            this.donViTinhDataGridViewTextBoxColumn.HeaderText = "donViTinh";
+            this.donViTinhDataGridViewTextBoxColumn.Name = "donViTinhDataGridViewTextBoxColumn";
+            // 
+            // donGiaDataGridViewTextBoxColumn
+            // 
+            this.donGiaDataGridViewTextBoxColumn.DataPropertyName = "donGia";
+            this.donGiaDataGridViewTextBoxColumn.HeaderText = "donGia";
+            this.donGiaDataGridViewTextBoxColumn.Name = "donGiaDataGridViewTextBoxColumn";
+            // 
+            // maNhomDataGridViewTextBoxColumn
+            // 
+            this.maNhomDataGridViewTextBoxColumn.DataPropertyName = "maNhom";
+            this.maNhomDataGridViewTextBoxColumn.HeaderText = "maNhom";
+            this.maNhomDataGridViewTextBoxColumn.Name = "maNhomDataGridViewTextBoxColumn";
             // 
             // Frm_QLTD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 509);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.btnMoi);
@@ -238,10 +310,13 @@
             this.Controls.Add(this.lblTennhom);
             this.Controls.Add(this.lblManhom);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.ltvMonAn);
             this.Controls.Add(this.trvNhomMA);
             this.Name = "Frm_QLTD";
             this.Text = "MENU";
+            this.Load += new System.EventHandler(this.Frm_QLTD_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLTDDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.monAnBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -267,8 +342,16 @@
         private System.Windows.Forms.Label lblTennhom;
         private System.Windows.Forms.Label lblManhom;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListView ltvMonAn;
         private System.Windows.Forms.TreeView trvNhomMA;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private QLTDDataSet qLTDDataSet;
+        private System.Windows.Forms.BindingSource monAnBindingSource;
+        private QLTDDataSetTableAdapters.MonAnTableAdapter monAnTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maMonAnDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenMonAnDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn donViTinhDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn donGiaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maNhomDataGridViewTextBoxColumn;
     }
 }
 
