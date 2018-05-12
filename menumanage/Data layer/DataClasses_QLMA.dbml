@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QLMA" Class="DataClasses_QLMADataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\;Initial Catalog=QLMA;Persist Security Info=True;User ID=sa" SettingsObjectName="Data_layer.Properties.Settings" SettingsPropertyName="QLMAConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.MonAn" Member="MonAns">
+    <Type Name="MonAn">
+      <Column Name="maMonAn" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="tenMonAn" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="donViTinh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="donGia" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="ghiChu" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="maNhom" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="NhomMonAn_MonAn" Member="NhomMonAn" ThisKey="maNhom" OtherKey="maNhom" Type="NhomMonAn" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NhomMonAn" Member="NhomMonAns">
+    <Type Name="NhomMonAn">
+      <Column Name="maNhom" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="tenNhom" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Association Name="NhomMonAn_MonAn" Member="MonAns" ThisKey="maNhom" OtherKey="maNhom" Type="MonAn" />
+    </Type>
+  </Table>
+</Database>
