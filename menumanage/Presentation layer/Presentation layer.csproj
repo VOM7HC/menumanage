@@ -53,6 +53,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmManage.resx">
+      <DependentUpon>frmManage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -74,6 +77,20 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Business layer\Business layer.csproj">
+      <Project>{7f9fe636-1e41-445e-b5da-9522d1c66b41}</Project>
+      <Name>Business layer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Data layer\Data layer.csproj">
+      <Project>{b7dad849-b8c7-427f-a119-dedf0cf6a555}</Project>
+      <Name>Data layer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Object\Object.csproj">
+      <Project>{2aae4e6b-c492-4d29-850b-c1a917b87995}</Project>
+      <Name>Object</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

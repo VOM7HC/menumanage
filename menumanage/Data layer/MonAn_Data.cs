@@ -16,7 +16,7 @@ namespace Data_layer
             db = new DataClasses_QLMADataContext();
         }
 
-        public List<MonAnObj> GetNhomMonAn(int maNhom)
+        public List<MonAnObj> GetTheoNhom(int maNhom)
         {
             List<MonAnObj> lst = new List<MonAnObj>();
             db = new DataClasses_QLMADataContext();

@@ -19,5 +19,9 @@ namespace Object
             MaNhom = maNhom;
             TenNhom = tenNhom;
         }
+
+        public NhomObj()
+        {
+        }
     }
 }
