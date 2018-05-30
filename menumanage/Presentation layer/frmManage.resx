@@ -151,7 +151,7 @@
     <value>False</value>
   </data>
   <data name="txtGC.Location" type="System.Drawing.Point, System.Drawing">
-    <value>154, 158</value>
+    <value>154, 154</value>
   </data>
   <data name="txtGC.Size" type="System.Drawing.Size, System.Drawing">
     <value>598, 26</value>
@@ -175,7 +175,7 @@
     <value>True</value>
   </data>
   <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>60, 177</value>
+    <value>60, 154</value>
   </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 18</value>
@@ -202,7 +202,7 @@
     <value>False</value>
   </data>
   <data name="txtDV.Location" type="System.Drawing.Point, System.Drawing">
-    <value>154, 94</value>
+    <value>154, 90</value>
   </data>
   <data name="txtDV.Size" type="System.Drawing.Size, System.Drawing">
     <value>598, 26</value>
@@ -226,7 +226,7 @@
     <value>True</value>
   </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>39, 105</value>
+    <value>39, 90</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
     <value>82, 18</value>
@@ -253,7 +253,7 @@
     <value>False</value>
   </data>
   <data name="txtDG.Location" type="System.Drawing.Point, System.Drawing">
-    <value>154, 126</value>
+    <value>154, 122</value>
   </data>
   <data name="txtDG.Size" type="System.Drawing.Size, System.Drawing">
     <value>598, 26</value>
@@ -277,7 +277,7 @@
     <value>False</value>
   </data>
   <data name="txtTenMA.Location" type="System.Drawing.Point, System.Drawing">
-    <value>154, 62</value>
+    <value>154, 58</value>
   </data>
   <data name="txtTenMA.Size" type="System.Drawing.Size, System.Drawing">
     <value>598, 26</value>
@@ -301,7 +301,7 @@
     <value>True</value>
   </data>
   <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>59, 141</value>
+    <value>59, 122</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
     <value>62, 18</value>
@@ -328,7 +328,7 @@
     <value>True</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 65</value>
+    <value>27, 58</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>94, 18</value>
@@ -379,7 +379,7 @@
     <value>True</value>
   </data>
   <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>33, 29</value>
+    <value>33, 26</value>
   </data>
   <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
     <value>88, 18</value>
@@ -560,7 +560,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAADM
-        BwAAAk1TRnQBSQFMAwEBAAGcAQABnAEAARABAAEQAQAE/wEJAQAI/wFCAU0BNgEEBgABNgEEAgABKAMA
+        BwAAAk1TRnQBSQFMAwEBAAGkAQABpAEAARABAAEQAQAE/wEJAQAI/wFCAU0BNgEEBgABNgEEAgABKAMA
         AUADAAEQAwABAQEAAQgGAAEEGAABgAIAAYADAAKAAQABgAMAAYABAAGAAQACgAIAA8ABAAHAAdwBwAEA
         AfABygGmAQABMwUAATMBAAEzAQABMwEAAjMCAAMWAQADHAEAAyIBAAMpAQADVQEAA00BAANCAQADOQEA
         AYABfAH/AQACUAH/AQABkwEAAdYBAAH/AewBzAEAAcYB1gHvAQAB1gLnAQABkAGpAa0CAAH/ATMDAAFm
