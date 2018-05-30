@@ -18,7 +18,7 @@ namespace Data_layer
         {
             db = new DataClasses_QLMADataContext();
             List<NhomObj> lst = new List<NhomObj>();
-            var templst = db.NhomMonAns.ToList();
+            List<NhomMonAn> templst = db.NhomMonAns.ToList();
             if(templst.Count > 0)
             {
                 foreach (var item in templst)

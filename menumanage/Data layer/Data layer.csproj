@@ -41,6 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataClasses_QLMA.cs">
+      <DependentUpon>DataClasses_QLMA.dbml</DependentUpon>
+    </Compile>
     <Compile Include="DataClasses_QLMA.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

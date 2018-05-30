@@ -33,7 +33,24 @@ namespace Data_layer
             }
             return lst;
         }
-
+        public List<MonAnObj> FindObj(string maMonAnID)
+        {
+            List<MonAnObj> lst = new List<MonAnObj>();
+            db = new DataClasses_QLMADataContext();
+            foreach (var item in db.MonAns.Where(x => x.maMonAn == maMonAnID))
+            {
+                MonAnObj monAn = new MonAnObj();
+                monAn.MaMonAn = item.maMonAn;
+                monAn.TenMonAn = item.tenMonAn;
+                monAn.DonviTinh = item.donViTinh;
+                monAn.MaNhom = (int)item.maNhom;
+                monAn.DonGia = (decimal)item.donGia;
+                monAn.GhiChu = item.ghiChu;
+                lst.Add(monAn);
+                break;
+            }
+            return lst;
+        }
         public bool AddMonAn(MonAnObj monAn)
         {
             db = new DataClasses_QLMADataContext();

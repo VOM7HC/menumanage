@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Object;
 using Data_layer;
-using Business_layer;
 
 namespace Presentation_layer
 {
@@ -69,7 +68,10 @@ namespace Presentation_layer
         private void formatGrid()
         {
             if (dataGridView.Columns["maMonAn"] != null)
-                dataGridView.Columns["maMonAn"].Visible = false;
+            {
+                dataGridView.Columns["maMonAn"].HeaderText = "Ma mon an";
+                dataGridView.Columns["maMonAn"].Width = 200;
+            }
             if (dataGridView.Columns["tenMonAn"] != null)
             {
                 dataGridView.Columns["tenMonAn"].HeaderText = "Ten mon an";
@@ -230,10 +232,26 @@ namespace Presentation_layer
             }
         }
 
-        private void btnHuy_Click(object sender, EventArgs e)
+        private void btn_Huy_Click(object sender, EventArgs e)
         {
             btnThemNhom.Text = "Thêm";
             HideTextNhom(false);
+        }
+
+        private void btn_Tim_Click(object sender, EventArgs e)
+        {
+            lstmonAn = monAn.FindObj(txt_Tim.Text);
+            dataGridView.DataSource = lstmonAn;
+        }
+
+        private void frmManage_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void txt_Tim_Click(object sender, EventArgs e)
+        {
+            txt_Tim.Text = "";
         }
     }
 }
